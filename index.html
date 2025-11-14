@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuvraj Chopra - Portfolio</title>
+
+    <!-- FAVICONS: put icon files in /assets/icons/ -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">`
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="assets/icons/site.webmanifest">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand">Yuvraj Chopra</div>
+            
+            <div class="nav-menu-desktop">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <button class="nav-mobile-toggle" id="mobile-menu-button" aria-label="Toggle mobile menu">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+
+        <div class="nav-menu-mobile" id="mobile-menu">
+            <a href="#home" class="nav-link-mobile active">Home</a>
+            <a href="#about" class="nav-link-mobile">About</a>
+            <a href="#skills" class="nav-link-mobile">Skills</a>
+            <a href="#projects" class="nav-link-mobile">Projects</a>
+            <a href="#education" class="nav-link-mobile">Education</a>
+            <a href="#contact" class="nav-link-mobile">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-gradient-bg"></div>
+            <div class="container hero-container">
+                <div class="hero-content animate-on-scroll fade-in-up">
+                    <h1 class="hero-title" id="hero-title-typing"></h1>
+                    
+                    <p class="hero-subtitle">
+                        Full-Stack Developer | ML Enthusiast | Building Intelligent Solutions with Code
+                    </p>
+                    <p class="hero-description">
+                        B.Tech CSE student passionate about crafting scalable applications, machine learning models, 
+                        and innovative solutions through code. Currently pursuing dual degrees while competing in hackathons 
+                        and building real-world projects.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            View Projects
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                        <a href="mailto:yuvraj.chopra19@gmail.com" class="btn btn-secondary">
+                            Contact Me
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-canvas-container animate-on-scroll fade-in-scale" id="hero-canvas-container">
+                    </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in-up">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-title-underline"></div>
+                </div>
+                <div class="about-content animate-on-scroll fade-in-up" data-delay="200">
+                    <p>
+                        I'm Yuvraj Chopra, a second-year Computer Science student at <strong class="text-cyan">Vellore Institute of Technology</strong> (CGPA 9.12) 
+                        simultaneously pursuing a <strong class="text-cyan">B.S. in Data Science from IIT Madras</strong> (2024-2028). 
+                        My technical journey is fueled by curiosity and the drive to solve real-world problems through innovative software solutions.
+                    </p>
+                    <p>
+                        I excel in high-pressure environments like hackathons, where I've built production-grade systems including 
+                        facial recognition payment platforms and full-stack college management apps. My expertise ranges from 
+                        low-level digital circuit design in Verilog to high-level machine learning optimization, grounded in 
+                        strong fundamentals in algorithms, data structures, and web architecture.
+                    </p>
+                    <p>
+                        Beyond coursework, I'm passionate about game development with Pygame, computer vision with OpenCV, and 
+                        competitive programming. I believe in learning by building—every project is an opportunity to push 
+                        technical boundaries and create meaningful impact.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in-up">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="section-title-underline"></div>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card animate-on-scroll fade-in-up" data-delay="100">
+                        <h3 class="skill-card-title">Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">C++</span><span class="skill-tag">JavaScript</span><span class="skill-tag">SQL</span><span class="skill-tag">Verilog HDL</span><span class="skill-tag">Bash/Shell</span>
+                        </div>
+                    </div>
+                    <div class="skill-card animate-on-scroll fade-in-up" data-delay="200">
+                        <h3 class="skill-card-title">Frameworks & Libraries</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Flask</span><span class="skill-tag">FastAPI</span><span class="skill-tag">React.js</span><span class="skill-tag">Node.js</span><span class="skill-tag">Express.js</span><span class="skill-tag">Tailwind CSS</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">NumPy</span><span class="skill-tag">Pandas</span><span class="skill-tag">dlib</span><span class="skill-tag">face_recognition</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">OpenCV</span><span class="skill-tag">Pygame</span>
+                        </div>
+                    </div>
+                    <div class="skill-card animate-on-scroll fade-in-up" data-delay="300">
+                        <h3 class="skill-card-title">Tools & Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">VS Code</span><span class="skill-tag">Docker</span><span class="skill-tag">Vercel</span><span class="skill-tag">Netlify</span><span class="skill-tag">Heroku</span><span class="skill-tag">AWS</span><span class="skill-tag">GCP</span><span class="skill-tag">Kaggle</span><span class="skill-tag">Jupyter Notebooks</span>
+                        </div>
+                    </div>
+                    <div class="skill-card animate-on-scroll fade-in-up" data-delay="400">
+                        <h3 class="skill-card-title">Core Competencies</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Full-Stack Web Development</span><span class="skill-tag">Machine Learning</span><span class="skill-tag">Computer Vision & Biometric Systems</span><span class="skill-tag">Digital Systems Design</span><span class="skill-tag">Data Structures & Algorithms</span><span class="skill-tag">REST API Development</span><span class="skill-tag">Cloud Deployment & DevOps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in-up">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-title-underline"></div>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card animate-on-scroll fade-in-up" data-delay="100">
+                        <div class="project-card-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            <h3 class="project-card-title">ShutterShuttle</h3>
+                        </div>
+                        <p class="project-card-description">Award-winning facial recognition payment system for campus transportation. Eliminates cash, cards, and queues with contactless biometric payments.</p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Python</span><span class="project-tag">Flask</span><span class="project-tag">OpenCV</span><span class="project-tag">dlib</span><span class="project-tag">SQLite</span><span class="project-tag">Machine Learning</span>
+                        </div>
+                        <div class="project-card-links">
+                            <a href="https://github.com/chopra-yuvraj/ShutterShuttle" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link-disabled">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card animate-on-scroll fade-in-up" data-delay="200">
+                        <div class="project-card-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 6V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v2"></path><path d="M18 12h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2"></path><path d="M12 18v2a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2"></path><rect x="6" y="10" width="12" height="12" rx="2"></rect></svg>
+                            <h3 class="project-card-title">Flappy Bird</h3>
+                        </div>
+                        <p class="project-card-description">Classic arcade game recreation built with Python and Pygame to master game development fundamentals including physics simulation and collision detection.</p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Python</span><span class="project-tag">Pygame</span><span class="project-tag">Game Development</span>
+                        </div>
+                        <div class="project-card-links">
+                            <a href="https://github.com/chopra-yuvraj/flappy-bird-pygame" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link-disabled">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card animate-on-scroll fade-in-up" data-delay="300">
+                        <div class="project-card-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+                            <h3 class="project-card-title">Typing Speed Test</h3>
+                        </div>
+                        <p class="project-card-description">Professional typing speed test application featuring real-time WPM calculation, accuracy tracking, and comprehensive performance analytics.</p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Python</span><span class="project-tag">Tkinter</span><span class="project-tag">Analytics</span>
+                        </div>
+                        <div class="project-card-links">
+                            <a href="https://github.com/chopra-yuvraj/Typing-Speed-Test-Python" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link-disabled">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card animate-on-scroll fade-in-up" data-delay="400">
+                        <div class="project-card-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            <h3 class="project-card-title">Task Manager CLI</h3>
+                        </div>
+                        <p class="project-card-description">Lightweight command-line task management system built in pure Java 17 with CSV persistence and zero external dependencies.</p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Java</span><span class="project-tag">CLI</span><span class="project-tag">CSV</span><span class="project-tag">OOP</span>
+                        </div>
+                        <div class="project-card-links">
+                            <a href="https://github.com/chopra-yuvraj/task-manager-cli-java-csv" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link-disabled">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="education-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in-up">
+                    <h2 class="section-title">Education</h2>
+                    <div class="section-title-underline"></div>
+                </div>
+                <div class="education-list">
+                    <div class="education-card animate-on-scroll fade-in-left" data-delay="100">
+                        <svg class="education-card-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v15H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        <div class="education-card-content">
+                            <h3 class="education-card-title">B.Tech in Computer Science & Engineering</h3>
+                            <p class="education-card-institution">Vellore Institute of Technology (VIT)</p>
+                            <p class="education-card-duration">2024 - 2028</p>
+                            <p class="education-card-cgpa">CGPA: 9.12 / 10.0</p>
+                            <div class="education-card-courses">
+                                <p>Relevant Coursework:</p>
+                                <div class="course-tags">
+                                    <span class="course-tag">Data Structures & Algorithms</span><span class="course-tag">Digital Systems Design Lab</span><span class="course-tag">Object-Oriented Programming</span><span class="course-tag">Database Management Systems</span><span class="course-tag">Computer Architecture</span><span class="course-tag">Environmental Sciences</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-card animate-on-scroll fade-in-right" data-delay="200">
+                        <svg class="education-card-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v15H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        <div class="education-card-content">
+                            <h3 class="education-card-title">B.S. in Data Science</h3>
+                            <p class="education-card-institution">Indian Institute of Technology Madras (IIT Madras)</p>
+                            <p class="education-card-duration">2024 - 2028</p>
+                            <div class="education-card-courses">
+                                <p>Relevant Coursework:</p>
+                                <div class="course-tags">
+                                    <span class="course-tag">Machine Learning</span><span class="course-tag">Statistical Methods</span><span class="course-tag">Business Data Management</span><span class="course-tag">Supervised & Unsupervised Learning</span><span class="course-tag">Neural Networks</span><span class="course-tag">Ensemble Methods</span><span class="course-tag">PCA</span><span class="course-tag">MLE/Bayesian Estimation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in-up">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-title-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <a href="mailto:yuvraj.chopra19@gmail.com" class="contact-card animate-on-scroll fade-in-up" data-delay="100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <h3 class="contact-card-title">Email</h3>
+                        <p class="contact-card-value">yuvraj.chopra19@gmail.com</p>
+                    </a>
+                    <a href="https://github.com/chopra-yuvraj" target="_blank" rel="noopener noreferrer" class="contact-card animate-on-scroll fade-in-up" data-delay="200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <h3 class="contact-card-title">GitHub</h3>
+                        <p class="contact-card-value">chopra-yuvraj</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/chopra-yuvraj" target="_blank" rel="noopener noreferrer" class="contact-card animate-on-scroll fade-in-up" data-delay="300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <h3 class="contact-card-title">LinkedIn</h3>
+                        <p class="contact-card-value">chopra-yuvraj</p>
+                    </a>
+                    <a href="mailto:24f2002642@ds.study.iitm.ac.in" class="contact-card animate-on-scroll fade-in-up" data-delay="400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <h3 class="contact-card-title">Academic Email</h3>
+                        <p class="contact-card-value">24f2002642@ds.study.iitm.ac.in</p>
+                    </a>
+                </div>
+
+                <div class="contact-footer animate-on-scroll fade-in-up" data-delay="500">
+                    <p>Ready to collaborate on exciting projects or discuss opportunities?</p>
+                    <a href="mailto:yuvraj.chopra19@gmail.com" class="btn btn-primary">Send me a message</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button class="floating-btn-nav" id="floating-nav-btn" aria-label="Go to next section">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+    <button class="floating-btn-top" id="scroll-to-top-btn" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+</body>
+</html>
